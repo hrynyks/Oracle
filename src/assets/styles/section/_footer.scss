@@ -1,0 +1,123 @@
+.footer {
+    padding: 55px 0;
+    background-color: $main-color;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &-left {
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        padding-left: 120px;
+        position: relative;
+        margin-bottom: 27px;
+
+        @include a (tablet) {
+            margin-bottom: 35px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/footer-logo.png);
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-title {
+            font-family: 'Yrsa', serif;
+            font-size: toRem(22);
+            color: $light-color;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        &-link {
+            font-size: toRem(13);
+            color: $light-color;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: toRem(13);
+        color: $light-color;
+        display: block;
+        margin-bottom: 55px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 25px;
+        white-space: nowrap;
+
+        &-link {
+            font-size: toRem(12);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $light-color;
+
+            &:first-child {
+                padding-right: 20px;
+                border-right: 1px solid $light-color;
+            }
+        }
+    }
+
+    &-right {
+        max-width: 340px;
+        width: 100%;
+
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-family: 'Yrsa', serif;
+        font-size: toRem(17);
+        font-weight: 400;
+        color: $light-color;
+        margin-bottom: 22px;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    &__descr {
+        font-size: toRem(13);
+        line-height: 24px;
+        color: $light-color;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    z-index: 1;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        @include a (laptop) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 50px;
+
+        @include a (mobile) {
+            gap: 15px;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(18);
+            color: $main-color;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: $accent-color;
+                border-bottom: 2px solid $accent-color;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 53px;
+    }
+
+    &__btn {
+        &-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 49px;
+            height: 49px;
+            background-color: $main-color;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+
+        &-right {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: $light-color;
+            width: 99px;
+            line-height: 40px;
+            background-color: $main-color;
+            border: 1px solid $main-color;
+            border-radius: 5px;
+            text-align: center;
+
+            &:hover {
+                background-color: $accent-color;
+                border: 1px solid $accent-color;
+            }
+        }
+    }
+}

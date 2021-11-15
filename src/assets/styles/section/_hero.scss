@@ -1,0 +1,49 @@
+.hero {
+    padding: 240px 0 135px;
+    background: url(/src/assets/images/hero-bg.jpg) no-repeat, center/cover;
+
+    @include a (tablet-xl) {
+        padding: 270px 0 50px;
+    }
+
+
+    &__content {
+        max-width: 494px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-family: 'Winter Insight', sans-serif;
+        font-size: toRem(135);
+        line-height: 96.32%;
+        font-weight: 400;
+        text-align: center;
+        color: $accent-color;
+        max-width: 494px;
+        width: 100%;
+        margin-bottom: 67px;
+    }
+
+    &__subtitle {
+        font-family: 'Winter Insight', sans-serif;
+        font-size: toRem(30);
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    &__span {
+        font-family: 'Yrsa', serif;
+        font-size: toRem(64);
+        letter-spacing: 0.1em;
+        color: $accent-color;
+        display: block;
+        text-align: center;
+    }
+}

@@ -1,0 +1,226 @@
+.advisor {
+
+    &__bg {
+        padding: 50px 0;
+        background: url(/src/assets/images/advisor-bg.png) no-repeat center/cover;
+    }
+
+    &__title {
+        font-family: 'Yrsa', serif;
+        font-size: toRem(72);
+        text-align: center;
+        color: $light-color;
+        background-color: $main-color;
+        padding: 55px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 58px;
+        margin-bottom: 50px;
+
+        &-item {
+            display: flex;
+            justify-content: space-around;
+            gap: 100px;
+
+            @include a (tablet) {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+        }
+    }
+
+    &__content {
+        padding-left: 170px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+
+        @include a (mobile) {
+            padding-left: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 0;
+
+            @include a (mobile) {
+                display: none;
+            }
+        }
+
+        &-1::before {
+            background: url(/src/assets/images/advisor-image-1.jpg);
+        }
+
+        &-2::before {
+            background: url(/src/assets/images/advisor-image-2.jpg);
+        }
+
+        &-3::before {
+            background: url(/src/assets/images/advisor-image-3.jpg);
+        }
+
+        &-title {
+            font-size: toRem(23);
+            font-weight: 400;
+            color: $main-color;
+
+            @include a (mobile) {
+                text-align: center;
+            }
+        }
+
+        &-descr {
+            max-width: 458px;
+            width: 100%;
+            line-height: 24px;
+
+            @include a (tablet) {
+                max-width: 300px;
+            }
+
+            @include a (mobile) {
+                text-align: center;
+            }
+        }
+
+        &-span {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__info {
+        &-time {
+            font-size: toRem(12);
+            color: $light-color;
+            background-color: $main-color;
+            border-radius: 3px 0px 0px 3px;
+            width: 163px;
+            height: 23px;
+            padding: 5px 8px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        &-price {
+            font-size: toRem(22);
+            color: $dark-color;
+            background-color: $light-color;
+            width: max-content;
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        &-span {
+            font-size: toRem(16);
+        }
+
+        &-btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &-btn {
+            font-size: toRem(17);
+            color: $light-color;
+            width: 163px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+
+            &-top {
+                background-color: $accent-color;
+                border: 1px solid $accent-color
+            }
+
+            &-bot {
+                background-color: $main-color;
+                border: 1px solid $main-color
+            }
+
+            &-txt {
+                padding-left: 36px;
+                position: relative;
+
+                &-call::before {
+                    content: "";
+                    position: absolute;
+                    background: url(/src/assets/images/advisor-phone-icon.png);
+                    width: 18px;
+                    height: 18px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+
+                &-msg::before {
+                    content: "";
+                    position: absolute;
+                    background: url(/src/assets/images/advisor-msg-icon.png);
+                    width: 20px;
+                    height: 20px;
+                    left: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__btn {
+        font-size: toRem(15);
+        color: $light-color;
+        text-align: center;
+        width: 255px;
+        line-height: 48px;
+        border-radius: 5px;
+
+        &-left {
+            background-color: $main-color;
+            border: 1px solid $main-color;
+        }
+
+        &-right {
+            border: 1px solid $accent-color;
+            background-color: $accent-color;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(/src/assets/images/advisor-btns-img.png);
+                width: 117px;
+                height: 45px;
+                right: -128px;
+                top: -50%;
+
+                @include a (tablet-xl) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
